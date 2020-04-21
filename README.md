@@ -12,14 +12,13 @@ Powered by [yilia](http://litten.me/)
 
 # 主题配置
 ## 安装
-### 新建一个文件夹，命名为`yilia-qure`
-### 克隆代码，放到`yilia-qure`里
+新建一个文件夹，命名为`yilia-qure`，克隆代码，放到`yilia-qure`里
 ``` yml
 git clone https://github.com/Anyway521/yilia-qure
 ```
-### 把`yilia-qure`放到博客的`theme`目录里，并且在博客根目录的`_config.yml`作修改`theme: yilia-qure`
+把`yilia-qure`放到博客的`theme`目录里，并且在博客根目录的`_config.yml`作修改`theme: yilia-qure`
 ## 配置文件
-### 主题配置文件`_config.yml`大致内容如下：
+主题配置文件`_config.yml`大致内容如下：
 ``` yml
 # Header
 menu:
