@@ -1,10 +1,11 @@
 # Yilia-qure 简约清新主题
 ================
-
 ## PC端
+
 ![GIF2020042121244](https://cdn.anyway1314.cn/imageGIF2020042121244.gif)
 
 ## 移动端
+
 ![GIF202004210254](https://cdn.anyway1314.cn/imageGIF202004210254.gif)
 
 简约优雅的个人博客，更多细节请点击 [我的博客](https://anyway1314.cn/) 查看效果。  
@@ -197,4 +198,4 @@ friends:
 #在这里添加任何配置，都加在“aboutme”的上面，否则会出问题
 aboutme: <br>Yilia-qure<br><br>一个清新简约的主题<br><br>
 ```
-一些基础的配置参考文章：[Yilia主题优化](https://anyway1314.cn/post/25766.html)
+
