@@ -1,0 +1,54 @@
+<%- partial('_partial/head') %>
+<body>
+  <!-- loading特效 -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+    <!-- <div class="load_title">Loading. . .<br></div> -->
+  </div>
+  <!-- loading结束 -->
+  <!-- 右上角丝带 -->
+  <div id="container" q-class="show:isCtnShow">
+    <a class="fork" href="#" target="_blank"><img width="149" height="149" src="https://cdn.anyway1314.cn/imageforkme_right_orange.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    <style>
+      .fork{display:none;}
+      .fork{position:fixed;
+               z-index:999;
+               top:0;
+               right:.5em
+      }     
+      @media(min-width:768px){.fork{display:inline;}}
+  </style>
+   
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <%- body %>
+          </div>
+        </div>
+      </div>
+      <%- partial('_partial/footer') %>
+    </div>
+    <%- partial('_partial/after-footer') %>
+    <%- partial('_partial/tools') %>
+    <%- partial('_partial/viewer') %>
+
+    
+  </div>
+<!-- 代码块复制功能 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/clipboard_use.js"></script>
+<!-- 代码块复制功能结束 -->
+</body>
+</html>

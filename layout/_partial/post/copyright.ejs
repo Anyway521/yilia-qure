@@ -1,0 +1,45 @@
+<!--添加版权声明-->
+<%
+  var sUrl = url.replace(/index\.html$/, '');
+  sUrl = /^(http:|https:)\/\//.test(sUrl) ? sUrl : 'https:' + sUrl;
+%>
+
+<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有copyright: true属性，才有版权声明； 2-所有文章均有版权声明 -->
+<% if ((theme.copyright.copyright_type === 2 || (theme.copyright.copyright_type === 1 && post.copyright)) && !index){ %>
+  <ul class="copyright">
+    <li class="copyright_author"><strong>本文作者：</strong>
+    <% if(config.author != undefined){ %>
+      <%= config.author%>
+    <% }else{%>
+      <font color="red">请在博客根目录“_config.yml”中填入正确的“author”</font>
+    <%}%></li>
+    <li class="copyright_article-url">
+    <strong>本文链接：</strong>
+    <a href="<%= config.url %>/<%= post.path %>" title="<%= post.title %>" target="_blank"><%= config.url %>/<%= post.path %></a>
+    </li>
+    <li class="copyright_update-time">
+        <strong >最后更新：</strong>
+        <time datetime="<%- date_xml(post.updated) %>" itemprop="dateUpdated"><%- full_date(post.updated, 'YYYY年MM月DD日 HH:mm:ss') %></time>
+    </li>
+    <!-- 有需要的可以取消注释 -->
+    <!-- <li class="copyright_article-titles"><strong >本文标题：</strong>
+    <a href="<%= config.url %>/<%= post.path %>" title="<%= post.title %>" target="_blank"><%= post.title %></a>
+    </li>
+    <li class="copyright_create-time">
+    <strong>发布时间：</strong>
+    <%- date(post.date, 'YYYY-MM-DD') %>
+    </li> -->
+    <li class="copyright_copyright">
+    <strong>版权声明：</strong>
+    本博客所有文章除特别声明外，均采用
+    <a rel="license" href="<%= theme.copyright.licensee_url%>" title="<%= theme.copyright.licensee_name %>"><%= theme.copyright.licensee_ename%></a>
+    许可协议进行许可。转载请注明出处！
+   </li>
+    <!-- <% if(theme.copyright.licensee_img != undefined){ %>
+      <a rel="license" href="<%= theme.copyright.licensee_url%>"><img alt="知识共享许可协议" style="border-width:0" src="<%= theme.copyright.licensee_img%>"/></a>
+    <% } %> -->
+    </ul>
+<% } else {%>
+  <ul class="copyright" hidden="hidden"></ul>
+<% } %>
+<!-- 添加版权声明》 -->

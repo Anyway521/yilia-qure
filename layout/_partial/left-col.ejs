@@ -1,0 +1,86 @@
+<% if(theme.style.bgTab == true){%>
+<script >
+	window.onload=function(){
+	var bglist = [];
+		bglist[0] = "https://cdn.anyway1314.cn/image20180202235236_5ShMs.jpeg";
+		bglist[1] = "https://cdn.anyway1314.cn/imagebkg-8.jpg";
+		bglist[2] = "https://cdn.anyway1314.cn/imagebkg-7.jpeg";
+		bglist[3] = "https://cdn.anyway1314.cn/imagebkgtim4.jpg";
+		bglist[4] = "https://cdn.anyway1314.cn/imagebkg16.jpg";
+		bglist[5] = "https://cdn.anyway1314.cn/imagebkg18.jpg";
+	var i = 0;
+	var bkg=document.getElementsByClassName("left-col")[0];
+			function time(){
+				   i<(bglist.length-1)?i++:i=0;
+				   bkg.style.background="url("+bglist[i]+")";
+			}
+			setInterval(time,3000);
+	}
+</script>
+<%}%>
+<div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner" style="font-size:15px;;font-weight: 500;">
+
+			<% if(theme.Rotate == true){ %>
+			<a href="<%=theme.root%>" class="profilepic_rotate"><img src="<%=theme.avatar%>" class="js-avatar"></a>
+			<% } else if(theme.Rotate == false){%>
+			<a href="<%=theme.root%>" class="profilepic"><img src="<%=theme.avatar%>" class="js-avatar"></a>
+			<%}%>
+			
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="<%=theme.root%>"><%=theme.author%></a></h1>
+		</hgroup>
+		<% if (theme.subtitle){ %>
+		    <!--这里是一言API-->
+		    <!-- <a id="hitokoto" href="https://hitokoto.cn/api" style="font-size: 16px;color: aliceblue"></a> -->
+		    <a id="hitokoto" href="#"  onmouseover="this.style.color='#4B0082';" onmouseout="this.style.color='aliceblue';">_(:з」∠)_ 加载中...</a>
+		    <!-- 这两条是为了兼容IE -->
+		    <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+		    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+		    <!--End-->
+	        <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+	        <!-- 一言结尾 -->
+           <!-- 如果不想用一言，那就注释掉上面的，改用下面一行 -->
+			<!-- <p class="header-subtitle"><%=theme.subtitle%></p> -->
+		<%}%>
+
+		<nav class="header-menu">
+			<ul>
+			<% for (var i in theme.menu){ %>
+				<li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+	        <%}%>
+			</ul>
+			<!-- js给主页，归档等增加图标，不需要刻意注释掉 -->
+			<script>
+				var menu = document.getElementsByClassName('header-menu')[0];
+				var lis = menu.children[0].getElementsByTagName('li');
+				var n = lis.length
+				var menu_icon = new Array()
+				// 这里可以继续写menu_icon[],class名参考font-awesome官网搜寻
+				menu_icon[0]="<i class=\"fa fa-home\" aria-hidden=\"true\"></i> "
+				menu_icon[1]="<i class=\"fa fa-book\" aria-hidden=\"true\"></i> "
+				for (var i = 0; i < n; i++){
+					var temp = lis[i].children[0].innerHTML;
+					lis[i].children[0].innerHTML = menu_icon[i] + temp;
+				}
+			</script>
+		</nav>
+		<nav class="header-smart-menu">
+    		<% for (var i in theme.smart_menu){ %>
+    			<% if(theme.smart_menu[i]){ %>
+    			<a q-on="click: openSlider(e, '<%-i%>')" href="javascript:void(0)" target="_self"><%= theme.smart_menu[i] %></a>
+    			<% } %>
+			<%}%>
+
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				<% for (var i in theme.subnav){ %>
+					<a class="<%= i %>" target="_blank" href="<%- url_for(theme.subnav[i]) %>" title="<%= i %>"><i class="icon-<%= i %>"></i></a>
+		        <%}%>
+			</div>
+		</nav>
+	</header>
+</div>
