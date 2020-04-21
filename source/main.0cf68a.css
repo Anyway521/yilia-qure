@@ -151,6 +151,28 @@
 	-ms-transition: all .2s ease-in
 }
 
+
+/* 原创、转载图标 */
+#article-type-y{
+	color: white;
+	font-size: 14px;
+	background: #bf59f3;
+	padding: 1px 5px;
+	margin-right: 5px;
+	margin-left: -3px;
+	border-radius: 2px
+}
+#article-type-z{
+	color: white;
+	font-size: 14px;
+	background: #8BC34A;
+	padding: 1px 5px;
+	margin-right: 5px;
+	margin-left: -3px;
+	border-radius: 2px
+}
+
+
 @-webkit-keyframes leftIn {
 	0%,60%,75%,90%,to {
 		-webkit-animation-timing-function: cubic-bezier(.215,.61,.355,1);
@@ -959,7 +981,7 @@ body {
 }
 
 .left-col {
-	background-image: url("https://cdn.anyway1314.cn/imagebkg-7.jpeg");
+	background-image: url("https://cdn.anyway1314.cn/imagebkg16.jpg");
 	width: 300px;
 	position: fixed;
 	opacity: 1;
@@ -993,6 +1015,7 @@ body {
 
 .left-col #header a:hover {
 	color: #FFEB3B  !important
+	/* color: #03A9F4  !important */
 }
 
 .left-col #header .header-subtitle {
@@ -1340,7 +1363,7 @@ pre .css~* .id,pre .id {
 	position: relative;
 	border-radius: 0 5px 5px 0;
 	margin: 5px 9px 5px 8px;
-	font-family: Menlo,Monaco,Andale Mono,lucida console,Courier New,monospace
+	font-family: Menlo,Monaco,Andale Mono,lucida console,Courier New,monospace;
 }
 
 .tagcloud a:hover {
@@ -1727,15 +1750,15 @@ pre .css~* .id,pre .id {
 }
 
 #page-nav .page-number {
-	width: 25px;
-	height: 26px;
+	width: 20px;
+	height: 25px;
 	background: #03a9f4;
 	display: inline-block;
 	color: #fff;
 	line-height: 25px;
 	font-size: 12px;
 	margin: 0 5px 30px;
-	border-radius: 50%
+	border-radius: 2px
 }
 
 #page-nav .page-number:hover {
@@ -1754,7 +1777,6 @@ pre .css~* .id,pre .id {
 #page-nav .extend {
 	color: navy;
 	margin: 0 27px;
-	font-weight: bold;
 	opacity: 1
 }
 
@@ -1825,7 +1847,7 @@ pre .css~* .id,pre .id {
 .archives .archive-article-title {
 	font-size: 20px;
 	color: #03a9f4;
-	font-weight: 600;
+	font-weight: bold;
 	transition: color .3s
 }
 
@@ -2229,7 +2251,7 @@ pre .css~* .id,pre .id {
 /* 主页文章标题 */
 .article .article-inner h1.article-title {
 	color: #03a9f4;
-	margin-left: 0;
+	margin-left: -6px;
 	font-weight: 700;
 	line-height: 35px;
 	margin-bottom: 20px;
@@ -2240,7 +2262,7 @@ pre .css~* .id,pre .id {
 /* 文章内容标题 */
 .article .article-title {
 	color: #03a9f4;
-	margin-left: 0;
+	margin-left: -6px;
 	font-weight: 700;
 	line-height: 35px;
 	margin-bottom: 20px;
@@ -3173,6 +3195,10 @@ pre .css~* .id,pre .id {
 	float: right
 }
 
+.footer-right a:hover{
+    color: navy;
+}
+
 @media screen and (max-width:800px) {
 	#container,body,html {
 		height: auto;
@@ -3467,6 +3493,11 @@ pre .css~* .id,pre .id {
 	#article-nav .article-nav-link-wrap .article-nav-title {
 		font-size: 16px
 	}
+
+    #article-type-y,#article-type-z{
+		margin-left: 1px;
+	}
+
 
 	#page-nav .extend {
 		opacity: 1
@@ -4341,8 +4372,9 @@ ul.copyright li {
 
 /* 一言api */
 #hitokoto {
-	font-size: 16px;
-	/* font-weight: bold; */
+	font-size: 15px;
+	font-family: YouYuan;
+	font-weight: bold;
 }
 
 /* 头像旋转 */
@@ -4431,7 +4463,5 @@ ul.copyright li {
 .code-wrapper:hover .btn-copy {
     opacity: 1;
 }
-
-
 
 

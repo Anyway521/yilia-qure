@@ -39,8 +39,7 @@
       background: <%= theme.style && theme.style.slider ? theme.style.slider : defaultCtnBg %>;
     }
   </style>
-  <%- partial('google-analytics') %>
-  <%- partial("baidu_tongji") %>
+  
    <!-- Js控制Loding特效-->
     <script>
       //监听加载状态改变
@@ -55,4 +54,5 @@
       }  
     </script>
     <!-- loading结束 -->
+    <%- partial("baidu_tongji") %>
 </head>

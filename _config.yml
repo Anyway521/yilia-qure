@@ -78,9 +78,8 @@ toc_empty_wording: '目录，不存在的…'
 # 是否有快速回到顶部的按钮
 top: true
 
-# Miscellaneous 百度统计和谷歌统计，站点标识
+# Miscellaneous 百度统计
 baidu_tongji: 
-#google_analytics: ''
 
 #网站图标，icon格式
 favicon: '/img/timg.ico'
