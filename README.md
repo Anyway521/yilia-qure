@@ -1,10 +1,12 @@
 # Yilia-qure 简约清新主题
 ================
-
 ## PC端
-![GIF2020042121244](https://cdn.anyway1314.cn/imageGIF2020042121244.gif)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200414221809865.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTIyODU5,size_16,color_FFFFFF,t_70#pic_center)
+
+![QQ截图20200421161401](https://cdn.anyway1314.cn/imageQQ截图20200421161401.jpg)
 
 ## 移动端
+
 ![GIF202004210254](https://cdn.anyway1314.cn/imageGIF202004210254.gif)
 
 简约优雅的个人博客，更多细节请点击 [我的博客](https://anyway1314.cn/) 查看效果。  
@@ -12,9 +14,9 @@ Powered by [yilia](http://litten.me/)
 
 # 主题配置
 ## 安装
-新建一个文件夹，命名为`yilia-qure`,克隆代码，放到`yilia-qure`里
+新建一个文件夹，命名为`yilia-qure`，克隆代码，放到`yilia-qure`里
 ``` yml
-git clone https://github.com/Anyway521/yilia-qure.git
+git clone https://github.com/Anyway521/yilia-qure
 ```
 把`yilia-qure`放到博客的`theme`目录里，并且在博客根目录的`_config.yml`作修改`theme: yilia-qure`
 ## 配置文件
@@ -25,6 +27,8 @@ menu:
   主页: '/'
   #留言: '/MessageBoard/'
   归档: '/archives/'
+  # 分类: '/categories/'
+  #关于: '/about/'
 
 # SubNav
 subnav:
@@ -195,3 +199,4 @@ friends:
 #在这里添加任何配置，都加在“aboutme”的上面，否则会出问题
 aboutme: <br>Yilia-qure<br><br>一个清新简约的主题<br><br>
 ```
+
