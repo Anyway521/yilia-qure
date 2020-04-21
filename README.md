@@ -2,7 +2,7 @@
 ================
 ## PC端
 
-![GIF2020042121244](https://cdn.anyway1314.cn/imageGIF2020042121244.gif)
+![QQ截图20200421161401](https://cdn.anyway1314.cn/imageQQ截图20200421161401.jpg)
 
 ## 移动端
 
