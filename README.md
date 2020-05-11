@@ -19,6 +19,9 @@ Powered by [yilia](http://litten.me/)
 git clone https://github.com/Anyway521/yilia-qure
 ```
 把`yilia-qure`放到博客的`theme`目录里，并且在博客根目录的`_config.yml`作修改`theme: yilia-qure`
+
+文件放置好后别忘记： `npm install` 一下，安装主题需要的依赖
+
 ## 配置文件
 主题配置文件`_config.yml`大致内容如下：
 ``` yml
@@ -85,12 +88,6 @@ copyright:
     licensee_ename: 'CC BY-NC-SA 4.0'                                        #版权协议的英文名称
     licensee_img: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png      # 版权协议的Logo
 
-# 备案信息，没有请留空
-beian: 
-
-# 又拍云开发者计划图片链接，没有请留空
-upyun:
-
 
 # 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
 toc: 1
@@ -102,7 +99,7 @@ toc_empty_wording: '目录，不存在的…'
 # 是否有快速回到顶部的按钮
 top: true
 
-# Miscellaneous 百度统计和谷歌统计，站点标识
+# Miscellaneous 百度统计和谷歌统计
 baidu_tongji: 
 #google_analytics: ''
 
@@ -117,6 +114,13 @@ avatar: '/img/me.jpg'
 
 #是否开启分享，如果不需要建议不要开启
 share_jia: true
+
+# Counting words字数统计，看个人需要是否开启
+word_count: true
+ 
+# 文章类型，在上面word_count: true的前提下可以进行开启
+# 具体类型在对应的md文件开头的 article_type属性进行定义。原创：article_type:0 ，，转载：article_type:1 :
+article_type: true
 
 #评论：1、Gitment；2、valine
 #不需要使用某项，直接设置值为false，或注释掉
@@ -164,7 +168,7 @@ gitalk:
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
   # 默认不再提供纯色背景
-  # 开启左侧背景图片切换，需要修改图片请到layout\_partial\left-col.ejs定制
+  # 是否开启左侧背景图片切换，需要修改图片请到layout\_partial\left-col.ejs定制
   bgTab: false
   # 图片切换如果是false,左侧背景图片请到\yilia\source\main.0cf68a.css搜索'left-col{',定义其中的background-image属性
   # 右滑板块背景渐变色
