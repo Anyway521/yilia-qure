@@ -122,12 +122,12 @@ article_type: true
 #1、giteement码云评论系统
 giteement:
   enable: true  # 是否启用码云
-  redirect_uri: https://anyway521.gitee.io/   # 回调地址
+  redirect_uri:    # 回调地址
   oauth_uri: https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token  # 授权地址，不能更改
-  giteeID: anyway521  # 码云账号英文名
-  repo: comment     # 存储评论的 repo
-  client_id: '0516788fddee56be44b3b4e8dd8d090500c7dc44e2077ecb1baec5f17a3263db'           #client ID
-  client_secret: '48b25a6de68548079c7f237e14346d3f0609aef1626b72d15826b4062b4be430'       #client secret
+  giteeID:   # 码云账号英文名
+  repo:      # 存储评论的 repo
+  client_id: ''           #client ID
+  client_secret: ''       #client secret
 
 
 #2、gitalk
@@ -144,7 +144,7 @@ gitalk:
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
   # 头像上面的背景颜色
-  # header: '#00BFFF'
+  header: '#00BFFF'
   # 右滑板块背景渐变色
   slider: 'linear-gradient(200deg,#e7eefc,#54c8ff)'
 
