@@ -31,7 +31,7 @@
           <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
         </div>
         <div class="widget tagcloud search-tag">
-          <p class="search-tag-wording">tag:</p>
+          <p class="search-tag-wording">Show Tags:</p>
           <label class="search-switch">
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
@@ -72,11 +72,13 @@
           <li class="search-li" q-repeat="items" q-show="isShow">
             <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
             <p class="search-time">
-              <i class="icon-calendar icon"></i>
+              <!-- <i class="icon-calendar icon"></i> -->
+              <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
               <span q-text="date|dateformat"></span>
             </p>
             <p class="search-tag">
-              <i class="icon-price-tags icon"></i>
+              <!-- <i class="icon-price-tags icon"></i> -->
+              <i class="fa fa-tag" aria-hidden="true"></i>
               <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
             </p>
           </li>

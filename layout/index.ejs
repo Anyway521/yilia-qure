@@ -1,1 +1,5 @@
+<% if (theme.giteement && theme.giteement.enable){ %>
+    <script src="https://giteement.oss-cn-beijing.aliyuncs.com/oauthcallback.browser.js"></script>
+    <script>Oauthcallback();</script>
+  <% } %>
 <%- partial('_partial/archive', {pagination: 2, index: true}) %>

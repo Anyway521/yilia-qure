@@ -1,25 +1,25 @@
 <div style="margin-top:10px;margin-bottom:-15px;">
-  <% if (theme.article_type == true){ %>
-    <% if(post.article_type == 0){ %>
-      <span id="article-type-y">原创</span>
-    <% } else if (post.article_type == 1){ %>
-      <span id="article-type-z">转载</span>
+    <% if (theme.article_type == true){ %>
+      <% if(post.article_type == 0){ %>
+        <span id="article-type-y">原创</span>
+      <% } else if (post.article_type == 1){ %>
+        <span id="article-type-z">转载</span>
+      <% } %>
     <% } %>
-  <% } %>
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-bar-chart" aria-hidden="true"></i>
-      <span class="post-meta-item-text" style="font-size: 15px;color: navy">  字数统计: </span>
-      <span class="post-count" style="font-size: 14px;color: navy"><%= wordcount(post.content) %></span>
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+        <span class="post-meta-item-text" style="font-size: 15px;color: navy">  字数统计: </span>
+        <span class="post-count" style="font-size: 14px;color: navy"><%= wordcount(post.content) %></span>
+      </span>
     </span>
-  </span>
-  
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="fa fa-clock-o" aria-hidden="true"></i>
-      <span class="post-meta-item-text" style="font-size: 15px;color: navy">  阅读时长: </span>
-      <span class="post-count" style="font-size: 14px;color: navy"><%= min2read(post.content) %>分</span>
+    
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+		<i class="fa fa-pagelines" aria-hidden="true"></i>
+        <span class="post-meta-item-text" style="font-size: 15px;color: navy">  阅读时长: </span>
+        <span class="post-count" style="font-size: 14px;color: navy"><%= min2read(post.content) %>分</span>
+      </span>
     </span>
-  </span>
 </div>

@@ -21,38 +21,25 @@
   %>
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link rel="dns-prefetch" href="<%= config.url %>">
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
-    <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
-  <% } %>
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
   <%- partial('css') %>
   <style type="text/css">
-  <% var defaultCtnBg = 'linear-gradient(200deg,#a0cfe4,#e8c37e)' %>
-    #container.show {
-      background: <%= theme.style && theme.style.slider ? theme.style.slider : defaultCtnBg %>;
-    }
+      <% var defaultCtnBg = 'linear-gradient(200deg,#e7eefc,#54c8ff)' %>
+      #container.show {
+        background: <%= theme.style && theme.style.slider ? theme.style.slider : defaultCtnBg %>;
+      }
   </style>
-  
-   <!-- Js控制Loding特效-->
-    <script>
-      //监听加载状态改变
-      document.onreadystatechange = completeLoading;
-      
-      //加载状态为complete时移除loading效果
-      function completeLoading() {
-          if (document.readyState == "complete") {
-              var loadingMask = document.getElementById('loader-wrapper');
-              loadingMask.parentNode.removeChild(loadingMask);
-          }
-      }  
-    </script>
-    <!-- loading结束 -->
+   
+    <% if (theme.rss){ %>
+      <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+    <% } %>
     <%- partial("baidu_tongji") %>
 </head>

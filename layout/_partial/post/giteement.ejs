@@ -1,0 +1,21 @@
+<% if (!index && theme.giteement && theme.giteement.enable){ %>
+  <div id="giteement-ctn" style="padding: 0px 30px 0px 30px;"></div>
+  <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
+  <script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script>
+  <script src="https://giteement.oss-cn-beijing.aliyuncs.com/oauthcallback.browser.js"></script>
+  <script>
+  var giteement = new Giteement({
+    id: '<%= page.date%>',
+    owner: '<%=theme.giteement.giteeID%>',
+    repo: '<%=theme.giteement.repo%>',
+    backcall_uri: '<%=theme.giteement.redirect_uri%>',
+    oauth_uri: '<%=theme.giteement.oauth_uri%>',
+    oauth: {
+      client_id: '<%=theme.giteement.client_id%>',
+      client_secret: '<%=theme.giteement.client_secret%>'
+    },
+  })
+  giteement.render('giteement-ctn')
+  Oauthcallback();
+  </script>
+<% } %>

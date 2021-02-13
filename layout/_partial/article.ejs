@@ -33,13 +33,19 @@
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
             <span class="tooltip-item">
-              赏
+              赞
             </span>
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
                   <p class="reward-p"><i class="icon icon-quo-left"></i><%= theme.reward_wording%><i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
+                    <% if(theme.reward_code) {%>
+                      <div class="reward-box-item">
+                        <img class="reward-img" src="<%= theme.reward_code%>">
+                        <span class="reward-type">创作不易，感谢支持！</span>
+                      </div>
+                      <% } %>
                     <% if(theme.alipay) {%>
                     <div class="reward-box-item">
                       <img class="reward-img" src="<%= theme.alipay%>">
@@ -65,7 +71,7 @@
       <%if(post.top){%>
         <div class="article-pop-out tagcloud">
           <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
+          <a class="article-tag-list-link color6">置顶</a>
         </div>
       <% } %>
       <%- partial('post/tag') %>
@@ -88,46 +94,25 @@
 <% } %>
 <%- partial('_partial/aside') %>
 
-
 <% if (!index && post.comments){ %>
-  <% if (theme.duoshuo){ %>
-  <%- partial('post/duoshuo', {
-      key: post.slug,
-      title: post.title,
-      url: config.url+url_for(post.path)
-    }) %>
-  <% } %>
-  
-  <% if (theme.valine&& theme.valine.appid && theme.valine.appkey){ %>
-    <section id="comments" class="comments">
-      <style>
-        .comments{margin:30px;padding:10px;background:#fff}
-        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-      </style>
-      <%- partial('post/valine', {
-        key: post.slug,
-        title: post.title,
-        url: config.url+url_for(post.path)
+    <!-- giteement评论 -->
+    <% if (theme.giteement && theme.giteement.enable){ %>
+      <%- partial('post/giteement', {
+            key: post.slug,
+            title: post.title,
+            url: config.url+url_for(post.path)
+          }) %>
+      <% } %>
+
+   <!-- gitalk评论 -->
+    <% if(theme.gitalk && theme.gitalk.enable){ %>
+      <%- partial('post/gitalk', {
+          key: post.slug,
+          title: post.title,
+          url: config.url+url_for(post.path)
         }) %>
-    </section>
-  <% } %>
-
-  <% if (theme.gitment_owner && theme.gitment_repo &&theme.gitment_oauth && theme.gitment_oauth.client_id && theme.gitment_oauth.client_secret){ %>
-  <%- partial('post/gitment', {
-      key: post.slug,
-      title: post.title,
-      url: config.url+url_for(post.path)
-    }) %>
-  <% } %>
-
-  <% if(theme.gitalk.enable){ %>
-    <%- partial('post/gitalk', {
-        key: post.slug,
-        title: post.title,
-        url: config.url+url_for(post.path)
-      }) %>
-    <% } %>
-
+      <% } %>
+      
 <% } %>
 
   

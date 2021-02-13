@@ -1,20 +1,14 @@
 # Yilia-qure 简约清新主题
 ================
 ## PC端
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200414221809865.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTIyODU5,size_16,color_FFFFFF,t_70#pic_center)
+![2021-02-13100122](https://cdn.jsdelivr.net/gh/Anyway521/blogpic2@main/image/2021-02-13100122.png)
 
-![QQ截图20200421161401](https://cdn.anyway1314.cn/imageQQ截图20200421161401.jpg)
-
-## 移动端
-
-![GIF202004210254](https://cdn.anyway1314.cn/imageGIF202004210254.gif)
-
-简约优雅的个人博客，更多细节请点击 [我的博客](https://anyway1314.cn/) 查看效果。  
+简约优雅的个人博客，移动端，适配pad，请访问 [我的博客](https://anyway521.gitee.io/) 查看效果。  
 Powered by [yilia](http://litten.me/)
 
 # 主题配置
 ## 安装
-新建一个文件夹，命名为`yilia-qure`，克隆代码，放到`yilia-qure`里
+克隆代码
 ``` yml
 git clone https://github.com/Anyway521/yilia-qure
 ```
@@ -122,55 +116,35 @@ word_count: true
 # 具体类型在对应的md文件开头的 article_type属性进行定义。原创：article_type:0 ，，转载：article_type:1 :
 article_type: true
 
-#评论：1、Gitment；2、valine
+#评论：只保留1.giteement 2.gitalk
 #不需要使用某项，直接设置值为false，或注释掉
-#具体请参考wiki：https://github.com/litten/hexo-theme-yilia/wiki/
 
-#1、Gitment
-# gitment_owner: ''      #你的 GitHub ID
-# gitment_repo: ''          #存储评论的 repo
-# gitment_oauth:
-#   client_id: ''           #client ID
-#   client_secret: ''       #client secret
+#1、giteement码云评论系统
+giteement:
+  enable: true  # 是否启用码云
+  redirect_uri: https://anyway521.gitee.io/   # 回调地址
+  oauth_uri: https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token  # 授权地址，不能更改
+  giteeID: anyway521  # 码云账号英文名
+  repo: comment     # 存储评论的 repo
+  client_id: '0516788fddee56be44b3b4e8dd8d090500c7dc44e2077ecb1baec5f17a3263db'           #client ID
+  client_secret: '48b25a6de68548079c7f237e14346d3f0609aef1626b72d15826b4062b4be430'       #client secret
 
 
-#2、Valine https://valine.js.org
-# valine:
-#   enable: true
-#   #Leancloud应用的appId
-#   appid: 5y0LtXIrx2FacaeYoLzmg7sv-gzGzoHsz
-#   #Leancloud应用的appId
-#   appkey: XoG9OJyQ6eLXMny0nuy8tQAT
-#   verify: true
-#   #验证码
-#   notify: true
-#   #评论回复提醒
-#   avatar: '/mm/identicon/monsterid/wavatar/retro/hide'
-#   #评论列表头像样式：'/mm/identicon/monsterid/wavatar/retro/hide'
-#   avatar_cdn: ''
-#   #头像CDN
-#   placeholder: '友情提醒，留下正确的邮箱地址可以第一时间获取评论反馈' #评论框占位符
-#   pageSize: 10 #评论分页
-#   visitor: true #阅读统计
-
-#3、gitalk
+#2、gitalk
 gitalk:
   enable: false #用来做启用判断可以不用
-  githubID: # 用户名
+  githubID: Anyway521
   repo: 'comments'
   # 存储博客评论的仓库地址，可以是存储博客的仓库
   ClientID: ''
   ClientSecret: ''
-  adminUser: # 用户名
+  adminUser: Anyway521
   distractionFreeMode: true
-
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
-  # 默认不再提供纯色背景
-  # 是否开启左侧背景图片切换，需要修改图片请到layout\_partial\left-col.ejs定制
-  bgTab: false
-  # 图片切换如果是false,左侧背景图片请到\yilia\source\main.0cf68a.css搜索'left-col{',定义其中的background-image属性
+  # 头像上面的背景颜色
+  # header: '#00BFFF'
   # 右滑板块背景渐变色
   slider: 'linear-gradient(200deg,#e7eefc,#54c8ff)'
 
