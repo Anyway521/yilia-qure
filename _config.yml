@@ -8,18 +8,18 @@ menu:
 
 # SubNav
 subnav:
-  csdn: 'https://blog.csdn.net/qq_40922859'
-  bilibili: 'https://space.bilibili.com/382349038'
+  csdn: ''
+  bilibili: ''
   #weibo: "#"
   #zhihu: "#"
   #weixin: '#'
   #jianshu: "#"
   #douban: "#"
   #segmentfault: "#"
-  github: 'https://github.com/Anyway521'
+  github: ''
   #acfun: "#"
   #mail: 'https://cdn.jsdelivr.net/gh/Anyway521/blogpic@main/image/mail.png'
-  qq: 'https://cdn.jsdelivr.net/gh/Anyway521/blogpic@main/image/imageMyqq2411535738.jpg'
+  qq: ''
   #facebook: "#"
   #google: "#"
   #twitter: "#"
@@ -66,7 +66,7 @@ copyright:
     licensee_img: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png      # 版权协议的Logo
 
 # 备案信息，没有请留空
-beian: 豫ICP备18033287号-1
+beian: 
 
 # 又拍云开发者计划图片链接，没有请留空
 upyun:
@@ -89,7 +89,7 @@ favicon: '/img/favicon.ico'
 rotate: false
 
 # 你的头像url
-avatar: 'https://cdn.jsdelivr.net/gh/Anyway521/blogpic@main/image/imageme.jpg'
+avatar: ''
 
 #是否开启分享，如果不需要建议不要开启
 share_jia: true
@@ -108,12 +108,12 @@ article_type: true
 #1、giteement码云评论系统
 giteement:
   enable: true  # 是否启用码云
-  redirect_uri: https://anyway521.gitee.io/   # 回调地址
+  redirect_uri:    # 回调地址
   oauth_uri: https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token  # 授权地址，不能更改
-  giteeID: anyway521  # 码云账号英文名
-  repo: comment     # 存储评论的 repo
-  client_id: '0516788fddee56be44b3b4e8dd8d090500c7dc44e2077ecb1baec5f17a3263db'           #client ID
-  client_secret: '48b25a6de68548079c7f237e14346d3f0609aef1626b72d15826b4062b4be430'       #client secret
+  giteeID:   # 码云账号英文名
+  repo:      # 存储评论的 repo
+  client_id: ''           #client ID
+  client_secret: ''       #client secret
 
 
 #2、gitalk
@@ -129,11 +129,8 @@ gitalk:
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
-  # 头像上面的背景颜色
-  # header: '#00BFFF'
-  #header: '#00000'
-  #开启左侧背景图片切换，需要修改图片请到layout\_partial\left-col.ejs定制
-  # bgTab: false
+  # 左侧头像的背景颜色
+  header: '#00BFFF'
   # 右滑板块背景渐变色
   slider: 'linear-gradient(200deg,#e7eefc,#54c8ff)'
 
