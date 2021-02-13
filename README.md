@@ -7,6 +7,7 @@
 Powered by [yilia](http://litten.me/)
 
 # 主题配置
+## 配置过程遇到问题欢迎Q我：2411535738
 ## 安装
 克隆代码
 ``` yml
